@@ -1,11 +1,10 @@
-
 function toDo() {
     const Input = document.getElementById('input');
-    const text = Input.value
+    const text = Input.value.trim()
     if (text !== '') {
         const list = document.getElementById('list')
         const li = document.createElement('li')
-        li.innerHTML = text + '<button onclick="this.parentElement.remove()">remove</button>'
+        li.innerHTML = '<input id="Checkbox" onclick="Rayure()" class type="checkbox">' + text + '  <button class="bg-red-500 text-white ml-4 px-3 py-1 rounded-lg" onclick="this.parentElement.remove()">remove</button>'
         list.appendChild(li)
         Input.value = ''
     }
@@ -17,11 +16,15 @@ function toDo() {
 }
 
 
+function Rayure() {
+    const Rayure = document.getElementById
+}
+
+function RemoveAll() {
+    location.reload()
+    
+}
 
 /*
-l'utilisateur entre sa tâche
-ensuite il appuie sur valider
-le code récupre la valeur l'input
-ensuite on la push
-ensuite on reinitialise
+faire en sorte que des que l'utilisateur clique dessu toutez les tâches qui ont été efféctuer soient supprimer
 */

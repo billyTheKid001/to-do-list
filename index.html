@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
-</head>
-<body>
-    <input id="input" type="text">
-    <button id="Validate" onclick="toDo()">Valider</button>
-    <ul id="list"></ul>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="script.js"></script>
-   
+</head>
+<body class="flex flex-col items-center mt-48 ">
+    <div class="flex justify-between items-center mb-6 sm:mb-8">
+            <h1 class="text-2xl sm:text-4xl font-bold transition-colors duration-500" id="title">⚡ Todo le loup</h1>
+            <button onclick="toggleDarkMode()" 
+                    class="p-3 rounded-xl transition-all duration-300 hover:scale-110 hover:rotate-12" id="toggleBtn">
+                <span id="toggleIcon" class="text-2xl">🌙</span>
+            </button>
+    </div>
+    <div class="shadow-lg p-4">
+    <input class="border  " id="input" type="text">
+    <button class="border bg-green-500 text-white m-4 px-3 py-1 rounded-lg " id="Validate" onclick="toDo()">Valider</button>
+    
+    <ul class=" flex flex-col gap-2" id="list"></ul>
+    <button class="border bg-red-500 text-white m-4 px-3 py-1 rounded-lg" id="RemoveAll" onclick="RemoveAll()">Supprimer toute les tâches effectuées</button>
+    </div>
 </body>
 </html>
